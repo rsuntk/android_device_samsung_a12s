@@ -10,6 +10,9 @@ DEVICE_PATH := device/samsung/a12s
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Assert
+TARGET_OTA_ASSERT_DEVICE := a12s,a12snsxx
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -28,13 +31,13 @@ ENABLE_SCHEDBOOST := true
 # Bootloader
 BOARD_VENDOR := samsung
 TARGET_SOC := universal3830
-TARGET_BOOTLOADER_BOARD_NAME := exynos850
+TARGET_BOOTLOADER_BOARD_NAME := s5e3830
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
 BOARD_BOOTIMG_HEADER_VERSION := 2
 BOARD_KERNEL_BASE := 0x10000000
-BOARD_KERNEL_CMDLINE := androidboot.hardware=exynos850 androidboot.selinux=enforce loop.max_part=7
+BOARD_KERNEL_CMDLINE := androidboot.hardware=s5e3830 androidboot.selinux=enforce loop.max_part=7
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_RAMDISK_OFFSET := 0x01000000
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -153,4 +156,4 @@ TWRP_EVENT_LOGGING := true
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 
 # Version
-TW_DEVICE_VERSION := SavedByLight Pre-Release
+TW_DEVICE_VERSION := "SBL, rsuntk"
